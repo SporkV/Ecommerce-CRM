@@ -1,27 +1,27 @@
 <div class="customer">
 
 <h2>
-  <%= @customer.full_name %>
+  <%= customer.full_name %>
 </h2>
 
 <p>
-  <%= image_tag @customer.image %>
+  <%= image_tag customer.image %>
 </p>
 
 <p>
   <b>Phone number:</b>
-  <%= @customer.phone_number %>
+  <%= customer.phone_number %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%= mail_to @customer.email %>
+  <%= mail_to customer.email %>
 </p>
 
 
 <p>
   <b>Notes:</b>
-  <%= @customer.notes %>
+  <%= customer.notes %>
 </p>
 
 </div>
