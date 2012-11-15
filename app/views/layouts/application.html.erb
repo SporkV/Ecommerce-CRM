@@ -7,12 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="menu">
-  <%= link_to 'All Customers', finder_path %>
-  <%= link_to 'Missing Emails', missing_email_path %>
-</div>
-
-<%= yield %>
+  <div id="content">
+    <div class="actions">
+      <%= link_to 'All Customers', finder_path %>
+      <%= link_to 'Missing Emails', missing_email_path %>
+    </div>
+    
+    <%= yield %>
+  </div>
 
 </body>
 </html>
