@@ -6,9 +6,15 @@
   <h2>
     <%= customer.full_name %>
   </h2>
-  <p>
-    <%= image_tag customer.image %>
-  </p>
+  <% if customer.image.present? %>
+    <p>
+      <%= image_tag customer.image %>
+    </p>
+  <% else %>
+    <p class="no_image">
+      <em>No customer image.</em>
+    </p>
+  <% end %>
   <p>
     <b>Phone:</b>
     <%= customer.phone_number %>
