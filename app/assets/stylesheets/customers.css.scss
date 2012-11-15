@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1, h2 {
+    font-family: Georgia, "Bitstream Charter", serif;
+}
+
 #content {
     width: 706px;
     background: #eee;
@@ -23,7 +27,7 @@
     float: left;
     margin-left: 20px;
     margin-bottom: 30px;
-    min-height: 535px;
+    min-height: 500px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
 }
 

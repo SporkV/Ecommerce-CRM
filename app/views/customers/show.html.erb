@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= render @customer %>
+<div class="customers">
+  <%= render @customer %>
+</div>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
