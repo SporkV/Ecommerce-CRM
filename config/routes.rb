@@ -1,5 +1,8 @@
 Crm::Application.routes.draw do
   resources :customers
+  
+  match "finder" => "finder#index", :as => 'finder', :via => :get
+  match "finder/missing_email" => "finder#missing_email", :as => 'missing_email', :via => :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
