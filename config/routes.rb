@@ -9,6 +9,8 @@ Crm::Application.routes.draw do
   # link_to 'Missing Email', missing_email_path
   
   root :to => "finder#index"
+  
+  match "forget_me" => "finder#forget_me_bro", :as => 'forget'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
