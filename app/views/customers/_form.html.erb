@@ -31,6 +31,10 @@
     <%= f.label :notes %><br />
     <%= f.text_area :notes %>
   </div>
+  <div class="field">
+    <%= f.label :province_id %><br />
+    <%= f.collection_select :province_id, @provinces, :id, :name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

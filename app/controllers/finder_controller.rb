@@ -1,6 +1,6 @@
 class FinderController < ApplicationController
   def index
-    @customers = Customer.all
+    @customers = Customer.order(:full_name)
   end
   
   def missing_email

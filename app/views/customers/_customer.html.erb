@@ -16,6 +16,14 @@
     </p>
   <% end %>
   <p>
+    <b>Province:</b>
+    <% if customer.province.present? %>
+      <%= customer.province.name  %>
+    <% else %>
+      No Province
+    <% end %>
+  </p>
+  <p>
     <b>Phone:</b>
     <%= customer.phone_number %>
   </p>
