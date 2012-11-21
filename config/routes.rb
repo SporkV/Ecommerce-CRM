@@ -11,6 +11,10 @@ Crm::Application.routes.draw do
   root :to => "finder#index"
   
   match "forget_me" => "finder#forget_me_bro", :as => 'forget'
+  
+  match "search" => "finder#search", :as => 'search', :via => :get
+  
+  match "results" => "finder#search_results", :as => 'results', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

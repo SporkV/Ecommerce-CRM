@@ -21,4 +21,13 @@ class FinderController < ApplicationController
     @customers = Customer.where("email IS NULL OR email = ''")
   end
   
+  def search
+  end # Loads up the search.html.erb view file.
+  
+  def search_results
+    @keyword = params[:keyword]
+    
+    @customers = Customer.where("full_name LIKE ?", "%#{@keyword}%")
+  end
+  
 end
