@@ -16,7 +16,25 @@
       <%= link_to 'Provinces', provinces_path %>
     </div>
     
-    <%= yield %>
+    <section>
+      <%= yield %>
+    </section>
+    <aside>
+      <h2>My Friends</h2>
+      <% if @my_friends.empty? %>
+        <p><em>No friends. :(</em></p>
+      <% else %>
+        <% @my_friends.each do |friend| %>
+          <p>
+            <%= friend.full_name %><br>
+            <%= render :partial => 'customers/friendlinks', :locals => { :customer => friend } %>
+          </p>
+        <% end %>
+        <p>
+          <%= link_to 'clear friends', clear_friends_path %>
+        </p>
+      <% end %>
+    </aside>
   </div>
 
 </body>

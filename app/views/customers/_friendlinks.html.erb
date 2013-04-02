@@ -1,0 +1,5 @@
+<% if session[:friends].include?(customer.id.to_s) %>
+  <%= link_to 'unlike', remove_friend_path(customer) %>
+<% else %>
+  <%= link_to 'like', add_friend_path(customer)  %>
+<% end %> 

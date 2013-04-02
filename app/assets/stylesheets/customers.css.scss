@@ -2,39 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1, h2 {
+h1, h2, h3 {
     font-family: Cambria, Georgia, "Bitstream Charter", serif;
 }
 
 #content {
-    width: 706px;
+    width: 870px;
     background: #eee;
     margin: 0 auto;
     padding: 20px;
+    overflow: auto;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
+    
+    section {
+        width: 706px;
+        float: left;
+    }
+    
+    aside {
+        width: 144px;
+        padding-left: 20px;
+        float: left;
+    }
 }
 
 .customers {
     overflow: auto;
     margin-left: -20px;
     margin-top: 30px; 
+
+    .customer {
+        background: white;
+        width: 200px;
+        border: 1px solid #aaa;
+        padding: 10px;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        min-height: 520px;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
+        
+        h2 {
+            margin-top: 0;
+        }
+    } 
 }
 
-.customer {
-    background: white;
-    width: 200px;
-    border: 1px solid #aaa;
-    padding: 10px;
-    float: left;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    min-height: 520px;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
-}
-
-.customer h2 {
-    margin-top: 0;
-}
 
 .customer .actions, .menu {
     text-align: right;

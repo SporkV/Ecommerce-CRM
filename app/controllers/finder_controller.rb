@@ -30,4 +30,19 @@ class FinderController < ApplicationController
     @customers = Customer.where("full_name LIKE ?", "%#{@keyword}%")
   end
   
+  def add_friend
+    session[:friends] << params[:id]
+    redirect_to root_url
+  end
+
+  def remove_friend
+    session[:friends].delete(params[:id])
+    redirect_to root_url
+  end
+  
+  def clear_friends
+    session[:friends] = nil
+    redirect_to root_url
+  end
+  
 end

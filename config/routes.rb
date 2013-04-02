@@ -15,6 +15,12 @@ Crm::Application.routes.draw do
   match "search" => "finder#search", :as => 'search', :via => :get
   
   match "results" => "finder#search_results", :as => 'results', :via => :post
+  
+  match "add_friend/:id" => "finder#add_friend", :via => :get, :as => "add_friend"
+        
+  match "remove_friend/:id" => "finder#remove_friend", :via => :get, :as => "remove_friend"
+  
+  match "clear_friends" => "finder#clear_friends", :via => :get, :as => "clear_friends"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
